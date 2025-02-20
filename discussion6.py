@@ -1,5 +1,6 @@
 import unittest
 import os
+import csv
 
 
 def load_csv(f):
@@ -26,6 +27,14 @@ def load_csv(f):
             print(f"Adding {row} to rows")
             rows.append(row)
         print(f"Final value of rows is {rows}")
+
+    print("Create a dictionary d")
+    d = {}
+    header = rows[0]
+    for year in header[1:]:
+        d[year] = rows [0]
+    print(f"Added the years, d is now {d}")
+    print("Add a;; the rows, skipping the first one")
 
 
 def get_annual_max(d):
